@@ -80,7 +80,8 @@ footer a:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 70%;
+  width: 90%;
+  max-width: 1315px;
   margin: auto;
 }
 
