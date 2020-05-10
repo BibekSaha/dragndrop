@@ -58,5 +58,5 @@ function showToast(data, success=false) {
   }
   setTimeout(() => {
     toast.style.visibility = 'hidden';
-  }, 3000);
+  }, 5000);
 }
