@@ -1,0 +1,95 @@
+/* Reset styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* Main styling */
+header {
+  padding: 20px;
+  color: #333;
+  background-color: #f3f4f5;
+  margin-bottom: 40px;
+  line-height: 2.4rem;
+}
+
+.container .box {
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hr {
+  width: 80%;
+  border-bottom: 2px dashed #B8C2CC;
+  margin-top: 30px;
+  background-color: #B8C2CC;
+  margin: 50px auto;
+}
+
+.hr ~ p {
+  text-align: center;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.wrapper .drop {
+  height: 150px;
+  width: 150px;
+  border: 2px dashed lightblue;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.toast {
+  min-height: 83px;
+  padding: 30px;
+  text-align: center;
+  visibility: hidden;
+  background-color: #F8FAFC;
+}
+
+footer {
+  margin: 30px;
+}
+
+footer a {
+  padding: 10px;
+  font-size:36px; 
+  color: gray
+}
+
+footer a:hover {
+  color: #333;
+}
+
+/* Layout styling */
+.container,
+.drop-container  {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: auto;
+}
+
+.toast {
+  width: 70%;
+  max-width: 350px;
+  margin: 30px auto;
+}
+
+/* background-color: rgb(108, 39, 224); Good Purple Color
+   background-color: rgb(31, 97, 127); Good Violet Color
+*/
