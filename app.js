@@ -26,6 +26,7 @@ drops.forEach(drop => {
     e.target.style.backgroundColor = color;
     e.target.style.border = 'none';
     e.target.setAttribute('title', 'click to copy color code');
+    e.target.style.cursor = 'pointer';
   });
 });
 
