@@ -5,7 +5,6 @@ const drops = document.querySelectorAll('.drop');
 const dropContainer = document.querySelector('.drop-container');
 const toast = document.querySelector('.toast');
 const themeColor = document.querySelector('meta[name="theme-color"]');
-console.log(themeColor);
 
 window.onload = refreshColorUI(boxes, themeColor);
 
@@ -40,10 +39,10 @@ drops.forEach(drop => {
 dropContainer.addEventListener('click', e => {
   if (e.target.hasAttribute('title')) {
     const color = e.target.style.backgroundColor;
-    /* *
-      * if success is true then showToast is called with color and success == true 
-      * if success is false then showToast is called with errData and success == false 
-      **/
+    /**
+     * if success is true then showToast is called with color and success == true 
+     * if success is false then showToast is called with errData and success == false 
+     */
     copyToClipboard(color, 'Internal Erro 403', showToast)
   }
 });
@@ -53,8 +52,8 @@ function showToast(data, success=false) {
   toast.style.visibility = 'visible';
   if (success) {
     toast.innerHTML = `<span>Color Copied: ${data}</span>`;
-    toast.style.color = `${data}` // '#38C172';
-    toast.style.borderLeft = `5px solid ${data}`; // '5px solid #38C172';
+    toast.style.color = `${data}`;
+    toast.style.borderLeft = `5px solid ${data}`;
   } else {
     toast.innerHTML = `<span>${data}</span>`;
     toast.style.color = '#E3342F';

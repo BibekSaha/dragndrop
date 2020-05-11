@@ -14,17 +14,17 @@ if (navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0) {
   modal.style.display = 'inherit';
 
   modalOKBtn.addEventListener('click', () => {
-    navigator.vibrate(50);
+    navigator.vibrate(30);
     modal.style.display = 'none';
   });
 
   boxes.forEach(box => {
     box.addEventListener('click', e => {
       const color = e.target.style.backgroundColor;
-      /* *
-      * if success is true then showTouchToast is called with color and success == true 
-      * if success is false then showTouchToast is called with errData and success == false 
-      **/
+      /**
+       * if success is true then showTouchToast is called with color and success == true 
+       * if success is false then showTouchToast is called with errData and success == false 
+       */
       copyToClipboard(color, 'Internal Error 403', showTouchToast);
       navigator.vibrate(50);
     });
@@ -35,8 +35,8 @@ if (navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0) {
     footer.style.marginBottom = '90px';
     if (success) {
       toast.innerHTML = `<span>Color Copied: ${data}</span>`;
-      toast.style.color = `${data}` // '#38C172';
-      toast.style.borderLeft = `10px solid ${data}`; // '5px solid #38C172';
+      toast.style.color = `${data}`;
+      toast.style.borderLeft = `10px solid ${data}`;
     } else {
       toast.innerHTML = `<span>${data}</span>`;
       toast.style.color = '#E3342F';
