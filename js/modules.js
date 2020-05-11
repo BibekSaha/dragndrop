@@ -1,4 +1,4 @@
-export function refreshColorUI(boxes) {
+export function refreshColorUI(boxes, themeColor) {
   function randomColorGenerator() {
     function randomColor() {
       return Math.round(Math.random() * 255);
@@ -6,6 +6,7 @@ export function refreshColorUI(boxes) {
     return `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
   }
 
+  themeColor.setAttribute('content', randomColorGenerator());
   boxes.forEach(box => {
     box.style.backgroundColor = randomColorGenerator();
   });

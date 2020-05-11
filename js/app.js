@@ -4,8 +4,10 @@ const boxes = document.querySelectorAll('.box');
 const drops = document.querySelectorAll('.drop');
 const dropContainer = document.querySelector('.drop-container');
 const toast = document.querySelector('.toast');
+const themeColor = document.querySelector('meta[name="theme-color"]');
+console.log(themeColor);
 
-window.onload = refreshColorUI(boxes);
+window.onload = refreshColorUI(boxes, themeColor);
 
 // dragstart event
 boxes.forEach(box => {
@@ -65,4 +67,4 @@ function showToast(data, success=false) {
 
 // Making the refresh button work
 const refresh = document.getElementById('refresh-icon');
-refresh.addEventListener('click', () => { refreshColorUI(boxes); });
+refresh.addEventListener('click', () => { refreshColorUI(boxes, themeColor); });
