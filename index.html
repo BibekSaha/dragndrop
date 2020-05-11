@@ -3,14 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f3f4f5" />
+  <meta name="theme-color" content="#333" />
   <title>RCP (by Bibek Saha)</title>
   <link rel="shortcut icon" href="./css/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/modal.css">
 </head>
 <body>
+  <div class="modal">
+    <div class="modal-content">
+      <h4>Touch input detected</h4>
+      <p>Sorry! We do not support touch input</p>
+      <p>Some features would be restricted</p>
+      <a href="#">OK</a>
+    </div>
+  </div>
+  <div class="touch-toast"></div>
+
   <header>
     <h1>Random Color Picker</h1>
     <p>By Bibek Saha</p>
@@ -35,21 +46,24 @@
       <div class="box" draggable="true"></div>
       <div class="box" draggable="true"></div>
       <div class="box" draggable="true"></div>
+      <div class="box" draggable="true"></div>
     </div>
 
-    <div class="hr"></div>
+    <div class="no-touch">
+      <div class="hr"></div>
 
-    <p>Drag colors from top and click below to copy it</p>
-    <div class="drop-container">
-      <div class="drop"></div>
-      <div class="drop"></div>
-      <div class="drop"></div>
-      <div class="drop"></div>
-      <div class="drop"></div>
+      <p>Drag colors from top and click below to copy it</p>
+      <div class="drop-container">
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+      </div>
+
+      <div class="toast"></div>
     </div>
   </div>
-
-  <div class="toast"></div>
 
   <footer>
     <a href="https://github.com/bibeksaha" target="_blank"><i class="fa fa-github"></i></a>
@@ -57,9 +71,9 @@
     <a href="https://www.youtube.com/channel/UCtbNJjxjeYzX7YWidvdofEQ" target="_blank"><i class="fa fa-youtube-play"></i></a>
   </footer>
 
-  <script src="./js/noMouse.js"></script>
-  <script src="./js/randomColor.js" type="module"></script>
   <script src="./js/app.js" type="module"></script>
+  <script src="./js/noMouse.js" type="module"></script>
+  <script src="./js/modules.js.js" type="module"></script>
   <script></script>
 </body>
 </html>

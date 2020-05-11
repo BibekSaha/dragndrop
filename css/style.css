@@ -83,7 +83,7 @@ footer a {
 }
 
 footer a:hover,
-#refresh-icon:hover {
+#refresh-icon:active {
   color: #333;
 }
 
