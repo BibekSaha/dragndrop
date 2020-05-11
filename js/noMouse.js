@@ -14,7 +14,7 @@ if (navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0) {
   modal.style.display = 'inherit';
 
   modalOKBtn.addEventListener('click', () => {
-    navigator.vibrate(100);
+    navigator.vibrate(50);
     modal.style.display = 'none';
   });
 
@@ -26,6 +26,7 @@ if (navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0) {
       * if success is false then showTouchToast is called with errData and success == false 
       **/
       copyToClipboard(color, 'Internal Error 403', showTouchToast);
+      navigator.vibrate(50);
     });
   });
 
