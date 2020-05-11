@@ -1,6 +1,4 @@
-(function () {
-  const boxes = document.querySelectorAll('.box');
-
+export function refreshColorUI(boxes) {
   function randomColorGenerator() {
     function randomColor() {
       return Math.round(Math.random() * 255);
@@ -11,4 +9,4 @@
   boxes.forEach(box => {
     box.style.backgroundColor = randomColorGenerator();
   });
-})();
+}

@@ -1,7 +1,11 @@
+import { refreshColorUI } from './randomColor.js';
+
 const boxes = document.querySelectorAll('.box');
 const drops = document.querySelectorAll('.drop');
 const dropContainer = document.querySelector('.drop-container');
 const toast = document.querySelector('.toast');
+
+window.onload = refreshColorUI(boxes);
 
 // dragstart event
 boxes.forEach(box => {
@@ -49,8 +53,8 @@ function showToast(data, success=false) {
   toast.style.visibility = 'visible';
   if (success) {
     toast.innerHTML = `<span>Color Copied: ${data}</span>`;
-    toast.style.color = '#38C172';
-    toast.style.borderLeft = '5px solid #38C172';
+    toast.style.color = `${data}` // '#38C172';
+    toast.style.borderLeft = `5px solid ${data}`; // '5px solid #38C172';
   } else {
     toast.innerHTML = `<span>${data}</span>`;
     toast.style.color = '#E3342F';
@@ -60,3 +64,8 @@ function showToast(data, success=false) {
     toast.style.visibility = 'hidden';
   }, 5000);
 }
+
+
+// Making the refresh button work
+const refresh = document.getElementById('refresh-icon');
+refresh.addEventListener('click', () => { refreshColorUI(boxes); });
