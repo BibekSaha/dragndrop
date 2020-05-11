@@ -14,6 +14,7 @@ if (navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0) {
   modal.style.display = 'inherit';
 
   modalOKBtn.addEventListener('click', () => {
+    navigator.vibrate(100);
     modal.style.display = 'none';
   });
 
