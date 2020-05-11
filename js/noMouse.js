@@ -6,8 +6,10 @@ if (navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0) {
  const touchRemove = document.querySelector('.no-touch');
  const boxes = document.querySelectorAll('.box');
  const footer = document.querySelector('footer');
+ const giude = document.querySelector('.wrapper p:first-child');
 
  touchRemove.remove();
+ giude.style.display = 'inherit';
  modal.style.display = 'inherit';
 
  modalOKBtn.addEventListener('click', () => {
