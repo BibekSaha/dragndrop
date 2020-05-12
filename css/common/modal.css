@@ -1,0 +1,24 @@
+.modal {
+  display: none;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+  background-color: rgba(0, 0,0, 0.7);
+  backdrop-filter: blur(3px);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modal .modal-content {
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  margin: 40% auto;
+  border: 5px solid#F2D024;
+  border-radius: 5px;
+  background-color: #FFF382;
+  color: #453411;
+}

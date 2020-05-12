@@ -1,0 +1,17 @@
+.modal ~ .touch-toast {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+  width: 100%;
+  overflow: hidden;
+  display: none;  
+  margin: 0 auto;
+  background-color: #f3f4f5;
+}
+
+#guide-p {
+  color: gray;
+  margin-bottom: 20px;
+  display: none;
+}

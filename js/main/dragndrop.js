@@ -1,12 +1,10 @@
-import { refreshColorUI, copyToClipboard } from './modules.js';
+import { copyToClipboard } from '../modules.js';
 
 const boxes = document.querySelectorAll('.box');
 const drops = document.querySelectorAll('.drop');
 const dropContainer = document.querySelector('.drop-container');
 const toast = document.querySelector('.toast');
 const themeColor = document.querySelector('meta[name="theme-color"]');
-
-window.onload = refreshColorUI(boxes, themeColor);
 
 // dragstart event
 boxes.forEach(box => {
@@ -43,7 +41,7 @@ dropContainer.addEventListener('click', e => {
      * if success is true then showToast is called with color and success == true 
      * if success is false then showToast is called with errData and success == false 
      */
-    copyToClipboard(color, 'Internal Erro 403', showToast)
+    copyToClipboard(color, 'Internal Error 403', showToast)
   }
 });
 
@@ -63,7 +61,3 @@ function showToast(data, success=false) {
     toast.style.visibility = 'hidden';
   }, 5000);
 }
-
-// Making the refresh button work
-const refresh = document.getElementById('refresh-icon');
-refresh.addEventListener('click', () => { refreshColorUI(boxes, themeColor); });

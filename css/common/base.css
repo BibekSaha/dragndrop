@@ -1,0 +1,48 @@
+#refresh-icon {
+  font-size: 30px;
+  color: gray;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.container .box {
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+  border-radius: 5px;
+  cursor: move;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.wrapper .drop {
+  height: 150px;
+  width: 150px;
+  border: 2px dashed lightblue;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.container,
+.drop-container  {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1315px;
+  margin: auto;
+}
+
+footer {
+  margin: 30px;
+}
+
+footer a {
+  padding: 10px;
+  font-size:36px; 
+  color: gray
+}
+
+footer a:hover,
+#refresh-icon:active {
+  color: #333;
+}
