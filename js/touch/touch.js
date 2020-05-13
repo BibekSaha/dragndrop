@@ -27,7 +27,7 @@ touchRemove.forEach(item => {
 //create the guide text for touch surface
 const guide = document.createElement('p');
 guide.id = 'guide-p';
-guide.appendChild(document.createTextNode('Click on the color to copy it'));
+guide.appendChild(document.createTextNode('Tap on the color to copy it'));
 wrapper.parentElement.insertBefore(guide, wrapper);
 
 // show the guide text
