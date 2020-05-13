@@ -1,0 +1,14 @@
+footer {
+  margin: 30px;
+}
+
+footer a {
+  padding: 10px;
+  font-size:36px; 
+  color: gray
+}
+
+footer a:hover,
+#refresh-icon:active {
+  color: #333;
+}

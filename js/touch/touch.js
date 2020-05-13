@@ -1,4 +1,4 @@
-import { copyToClipboard, insertAfter } from '../modules.js'
+import { copyToClipboard, insertAfter, createModal } from '../modules.js'
 
 const modal = document.querySelector('.modal');
 const touchRemove = document.querySelectorAll('.remove-for-touch');
@@ -7,14 +7,12 @@ const footer = document.querySelector('footer');
 const wrapper = document.querySelector('.wrapper').firstChild;
 
 // process for modal's dynamic content
-const modalContent = document.querySelector('.modal-content');
-modalContent.classList.add('touch-modal');
-modalContent.innerHTML = `
-<h4>Touch input detected</h4>
-<p>Sorry! Touch input is not supported</p>
-<p>Some features would be restricted</p>
-<a href="#">OK</a>`
-const modalOKBtn = document.querySelector('.modal-content a');
+const [okBtn, modalContent] = createModal('touch-modal', 'Touch input detected', `<p>Sorry! Touch input is not supported</p><p>Some features would be restricted</p>`, 'OK');
+okBtn.addEventListener('click', () => {
+  modalContent.classList.remove('touch-modal');
+  navigator.vibrate(30);
+  modal.style.display = 'none';
+});
 
 // creating the touch toast
 const toast = document.createElement('div');
@@ -34,15 +32,6 @@ wrapper.parentElement.insertBefore(guide, wrapper);
 
 // show the guide text
 guide.style.display = 'inherit';
-
-// show the modal
-modal.style.display = 'inherit';
-
-// if ok button is pressed remove the modal
-modalOKBtn.addEventListener('click', () => {
-  navigator.vibrate(30);
-  modal.style.display = 'none';
-});
 
 boxes.forEach(box => {
   box.addEventListener('click', e => {

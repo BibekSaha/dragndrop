@@ -47,3 +47,27 @@ export function linkToHTML(startNode, firstNode, ...nodes) {
     oldNode = node;
   });
 }
+
+const modal = document.querySelector('.modal');
+const modalContent = document.querySelector('.modal-content');
+export function createModal(className, headerText, content, btnText) {
+  modal.style.display = 'inherit';
+  modalContent.classList.add(className);
+  modalContent.innerHTML = `
+    <i class="fa fa-close"></i>
+    <h4>${headerText}</h4>
+    ${content}
+    <a id="btn" href="#">${btnText}</a>
+  `;
+
+  const modalBtn = modalContent.querySelector('#btn');
+  const crossBtn = modalContent.querySelector('.modal-content i');
+  
+  crossBtn.addEventListener('click', () => {
+    modalContent.classList.remove(className);
+    navigator.vibrate(30);
+    modal.style.display = 'none';
+  });
+
+  return [modalBtn, modalContent];
+}

@@ -8,5 +8,7 @@ html,
 body {
   font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
-  font-size: 1.1em;
+  font-size: 1.05em;
+  min-height: 100%;
+  background-color: #F1F5F8;
 }

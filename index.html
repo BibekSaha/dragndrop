@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./css/common/reset.css">
   <link rel="stylesheet" href="./css/common/header.css">
   <link rel="stylesheet" href="./css/common/base.css">
+  <link rel="stylesheet" href="./css/common/footer.css">
   <script src="./js/lazyLoad.js" type="module"></script>
 </head>
 <body>
@@ -21,6 +22,7 @@
   <header>
     <h1>Random Color Picker</h1>
     <p>By Bibek Saha</p>
+    <a class="remove-for-touch" href="./palette.html"><i class="fa fa fa-eye fa-arrow-right"></i> &nbsp;&nbsp;view saved palettes</a>
   </header>
 
   <div class="wrapper">
@@ -50,8 +52,8 @@
 
       <p>Drag colors from top and click below to copy it</p>
 
-      <a href="#" id="save-button">save</a>
-      
+      <i class="fa fa fa-bookmark-o" active="false" id="bookmark"></i>
+
       <div class="drop-container">
         <div class="drop"></div>
         <div class="drop"></div>
@@ -71,6 +73,7 @@
   </footer>
 
   <script src="./js/color.js" type="module"></script>
+  <script src="./js/main/save.js" type="module"></script>
   <div id="add-dynamic-scripts"></div>
 </body>
 </html>

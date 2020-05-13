@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palatte</title>
+  <script>
+    if (navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0) {
+      window.location.replace('./index.html')
+    }
+  </script>
+  <link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/common/reset.css">
+  <link rel="stylesheet" href="./css/common/header.css">
+  <link rel="stylesheet" href="./css/palette/style-pal.css">
+  <link rel="stylesheet" href="./css/common/footer.css">
+</head>
+<body>
+  <header>
+    <h1>Random Color Picker</h1>
+    <p>By Bibek Saha</p>
+    <a class="remove-for-touch" href="./index.html"><i class="fa fa-plus"></i>&nbsp;&nbsp;create color palette</a> 
+  </header>
+
+  <div id="palette-color">
+    <div id="color-part"></div>
+    <div id="text-part">Copied to Clipboard</div>
+  </div>
+
+  <div class="colors"></div>
+
+  <footer>
+    <a href="https://github.com/bibeksaha" target="_blank"><i class="fa fa-github"></i></a>
+    <a href="https://twitter.com/MrBibekSaha" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.youtube.com/channel/UCtbNJjxjeYzX7YWidvdofEQ" target="_blank"><i class="fa fa-youtube-play"></i></a>
+  </footer>
+
+  <script src="./js/palette/main-pal.js" type="module"></script>
+</body>
+</html>

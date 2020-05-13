@@ -1,10 +1,10 @@
 import { copyToClipboard } from '../modules.js';
 
+let dropCount = 0;
 const boxes = document.querySelectorAll('.box');
 const drops = document.querySelectorAll('.drop');
 const dropContainer = document.querySelector('.drop-container');
 const toast = document.querySelector('.toast');
-const themeColor = document.querySelector('meta[name="theme-color"]');
 
 // dragstart event
 boxes.forEach(box => {
@@ -30,6 +30,14 @@ drops.forEach(drop => {
     e.target.style.border = 'none';
     e.target.setAttribute('title', 'click to copy color code');
     e.target.style.cursor = 'pointer';
+    dropCount++;
+
+    if (dropCount == 5) {
+      const bookmark = document.getElementById('bookmark');
+      bookmark.style.color = 'gray';
+      bookmark.style.cursor = 'pointer';
+      bookmark.title = 'save color palatte';
+    }
   });
 });
 

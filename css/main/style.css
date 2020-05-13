@@ -1,16 +1,3 @@
-#save-button {
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-  background-color: rgb(115, 35, 195);
-  padding: 15px 30px;
-  margin-top: 20px;
-  border-radius: 5px;
-  font-size: 1.1em;
-  margin: 7px 0;
-}
-
-/* Main styling */
 .hr {
   width: 80%;
   border-bottom: 2px dashed #B8C2CC;
@@ -38,4 +25,9 @@
   width: 70%;
   max-width: 350px;
   margin: 30px auto;
+}
+
+#bookmark {
+  font-size: 40px; 
+  color: #DAE1E7;
 }

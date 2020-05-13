@@ -1,0 +1,31 @@
+.add-modal {
+  border-color: #5661B3;
+  background-color: #191E38;
+  color: #f3f4f5;
+}
+
+.add-modal h4 {
+  font-size: 1.7em;
+}
+
+.add-modal input {
+  height: 40px;
+  width: 85%;
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #6574CD;
+  padding: 5px 5px 5px 20px;
+  color: #E6E8FF;
+  border-radius: 5px;
+  border: none;
+  outline: #5661B3;
+}
+
+.add-modal a {
+  color: white;
+  margin-top: 30px;
+  background-color: #7886D7;
+  border-color: #5661B3;
+  color: #f3f4f5;
+}

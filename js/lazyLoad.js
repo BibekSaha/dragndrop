@@ -14,7 +14,9 @@ if (navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0) {
 
 } else {
   const style = createLinkNode('./css/main/style.css');
-  linkToHTML(htmlStyle, style);
+  const modal = createLinkNode('./css/common/modal.css');
+  const mainModal = createLinkNode('./css/main/main-modal.css')
+  linkToHTML(htmlStyle, style, modal, mainModal);
 
   const script = createScriptNode('./js/main/dragndrop.js');
   const db = createScriptNode('./js/main/database.js');
