@@ -43,7 +43,7 @@ import {createModal} from '../modules.js';
       
       let colorObjectStore = db.transaction('colorStore', 'readwrite').objectStore('colorStore');
       colorObjectStore.add(color);
-      window.location.href = 'http://bibeksaha.github.io/palette.html';
+      window.location.href = 'http://bibeksaha.github.io/dragndrop/palette.html';
     })
   })
 })();
