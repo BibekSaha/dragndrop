@@ -1,5 +1,5 @@
 .colors {
-  width: 35%;
+  width: 80%;
   min-width: 500px;
   max-width: 1000px;
   margin: 0 auto;
@@ -7,6 +7,7 @@
 
 .color-wrapper {
   box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  min-width: 500px;
   background-color: #f2f2f2;
   padding: 20px;
   border-radius: 10px;
