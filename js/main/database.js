@@ -13,6 +13,29 @@ import {createModal} from '../modules.js';
 
   openDBRequest.onsuccess = function(e) {
     db = e.target.result;
+    
+     bookmark.addEventListener('click', e => {
+      if (!e.target.hasAttribute('title')) return;
+      const content = `
+        <input type="text"><br>
+      `;
+      const [saveBtn, modalContent] = createModal('add-modal', 'Name of the palette', content, 'save');
+      saveBtn.addEventListener('click', () => {
+        let color = Array.from(dropContainer.children).map(drop => {
+          if (drop.style.backgroundColor) {
+            return drop.style.backgroundColor;
+          }
+        });
+        color = {
+          name: modalContent.querySelector('input').value,
+          color
+        };
+
+        let colorObjectStore = db.transaction('colorStore', 'readwrite').objectStore('colorStore');
+        colorObjectStore.add(color);
+        window.location.href = './palette.html';
+      })
+    })
   }
 
   openDBRequest.onupgradeneeded = function(e) {
@@ -23,27 +46,4 @@ import {createModal} from '../modules.js';
   openDBRequest.onerror = function(e) {
     console.log('Error estabilishing connection to the database');
   }
-
-  bookmark.addEventListener('click', e => {
-    if (!e.target.hasAttribute('title')) return;
-    const content = `
-      <input type="text"><br>
-    `;
-    const [saveBtn, modalContent] = createModal('add-modal', 'Name of the palette', content, 'save');
-    saveBtn.addEventListener('click', () => {
-      let color = Array.from(dropContainer.children).map(drop => {
-        if (drop.style.backgroundColor) {
-          return drop.style.backgroundColor;
-        }
-      });
-      color = {
-        name: modalContent.querySelector('input').value,
-        color
-      };
-      
-      let colorObjectStore = db.transaction('colorStore', 'readwrite').objectStore('colorStore');
-      colorObjectStore.add(color);
-      window.location.href = './palette.html';
-    })
-  })
 })();
