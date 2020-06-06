@@ -1,4 +1,4 @@
-import {createModal} from '../modules.js';
+import { createModal } from '../modules.js';
 
 (function() {
   if (!window.indexedDB) {
