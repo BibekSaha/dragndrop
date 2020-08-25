@@ -17,7 +17,7 @@ import { createModal } from '../modules.js';
      bookmark.addEventListener('click', e => {
       if (!e.target.hasAttribute('title')) return;
       const content = `
-        <input type="text"><br>
+        <input autofocus type="text"><br>
       `;
       const [saveBtn, modalContent] = createModal('add-modal', 'Name of the palette', content, 'save');
       saveBtn.addEventListener('click', () => {
